@@ -27,7 +27,16 @@ The module will cover
 	One could easily divide HTML elements into two groups. The first group consists of elements that refer to parts of a document: headers, paragraphs, tables, forms, lists, and so on. ```<h1>, <p>, <table>, <ul>```We call this semantic HTML as they refer to the names of things; they describe what they are.  
 	
    Another group contains the elements used to indicate how things look: how they are aligned, which font is used, if it is in bold or italics, and so on  ```<center>, <font>, <b>, <i>``` and we could call them presentational HTML. The same is true for HTML attributes.  class="green" or id="chapter" would be semantic, while width="150px" or valign="top" would be presentational.  
-  
-  
+
+#### Tags for meaning. 
+```<em>``` => emphasis on a word. 
+
+```<strong> ```=> bolden a word. 
+
+```<code>``` => allows you to add css into an html file. Built right into the html, inline 
+
+```<pre> ``` => allows you to use the formating you have in html to display as you have it. Think of odd poems. 
 
 
+```
+```
