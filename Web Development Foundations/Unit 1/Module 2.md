@@ -37,6 +37,39 @@ The module will cover
 
 ```<pre> ``` => allows you to use the formating you have in html to display as you have it. Think of odd poems. 
 
+### Lists
+Another important organizational tool for web pages is the list, or enumeration, of contents. In HTML this is usually done with three different, but similar, structures:
 
-```
-```
+	- The  <ul> element that represents unordered lists where bulleted items are the default (in the essential reading you can see how to use other symbols instead of bullets).
+	- The <ol>element that represents ordered lists where Arabic numerals are the default (in the essential reading you can see how to use other symbols instead of Arabic numerals).
+	- The  <dl> element that defines lists where the items are preceded by a defined HTML element. (Key Value Pair)
+
+### Tables
+As expected, HTML follows the same markup language philosophy to clearly set apart the data from its formatting. Therefore, the table data is informed using the ```<table>``` tag to encompass the table rows, each identified by the  ```<tr>```  tag.
+
+   Each row element may contain either a table header, or a common row. If a row contains the table header, each cell (one per column) within the header row uses the ```<th>``` tag. However, if the row contains common (non-header) elements, the ```<td>``` tag is used to identify the contents of each cell.
+	
+	
+### Span and Div tags
+A web page is frequently composed of several sections that may have different styles. You have already seen some ways to define sections in HTML, using headings and paragraphs that follow some natural divisions linked to the content itself. In addition to headings, there are two HTML elements you can use to define sections that are exclusively linked to formatting purposes: 
+
+1. The ```<div>``` tag defines a section that is intended to aggregate multiple lines into a block that follows a similar style.
+2. The ```<span>``` tag defines an inline section of text that follows a similar style.
+	
+The ```<div>``` tag can be defined with the usual attributes for background, colors, and borders, and other formatting options can be used as the padding property, which defines the margins of the ```<div>``` block.
+
+The ```<span>``` tag is often used to refer to portions of the text that will follow a specific style according to the intended semantics of the displayed content.
+
+For example, the HTML portion provided defines a section using the ```<div>``` tag with a background color, a border, and a padding of 60 pixels. It also defines a ```<span>``` tag to highlight a portion of the text using a border.
+	
+### HTML5- specific tags 
+- ```<header>``` This is used to contain the headline for a page or section. It typically contains a company logo and navigational elements.
+- ```<footer>``` Footers typically contain links to other related information, contact info, and copyright statements. Make sure you keep the latter up-to-date. People will not trust the information on a site that has a date of two years ago.  
+ - ```<nav>``` This container can be used for the main navigation portion of your site.  
+  - ```<aside>``` This tag is very useful to place the component of your side that often is placed on the left, next to everything else.  
+  - ```<article> and <section>``` These two are useful to better organize your document. You can use them for blog posts or, as the names suggest, articles or sections.  
+ 
+### HTML Entities 
+>  As we know, all tags begin with a < sign and end with a > sign. Just imagine you want to use one of those as part of your content. This just might confuse the browser. That is why we have HTML entities. HTML entities are strings that begin with an ampersand and end with a semicolon. This represents the ampersand itself: & A very useful HTML entity is the non-breaking space:   It allows you to insert one or more spaces in you content. To use the < or > sign in your content, we have: < and > Also very useful are &eur;, for the Euro symbol, © for the copyright sign, and ® for the Registered Trademark sign. Non-English characters can be represented as HTML entities as well, for example, é for é, è for è, and ê for ê. We recommend you look up some of the online references if you want to see a complete list.
+
+
