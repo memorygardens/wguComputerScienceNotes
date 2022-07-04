@@ -18,13 +18,13 @@ Answer: Header, audio, nav, footer
 
 Question: States that federal agencies must make electronic information accessible
 
-Answer: Section 508 of the rehabiliation Act
+Answer: Section 508 of the rehabilitation Act
 
 Question: HTML 4.01 added support for which of the following
 
-Answer: CSS, forms, multiple spoken languages, scripting languages, tabls
+Answer: CSS, forms, multiple spoken languages, scripting languages, tables
 
-Question: As a general rule, adhering to __ will provide a more consistent rednering of your webpages
+Question: As a general rule, adhering to __ will provide a more consistent rendering of your webpages
 
 Answer: W3C validation standards
 
@@ -56,7 +56,7 @@ Question: which of the following are block-level elements?
 
 Answer: h1, footer, div, p
 
-Question: whic of the follwoing are examples of container tags (context between their openings)
+Question: which of the following are examples of container tags (context between their openings)
 
 Answer: h3, article, p
 
@@ -64,7 +64,7 @@ Question: identify the attribute
 
 Answer: class
 
-Question: which of the follwoing are HTML5 Semantic Tags
+Question: which of the following are HTML5 Semantic Tags
 
 Answer: footer, nav, header
 
@@ -263,3 +263,38 @@ Answer: google, yahoo
 Question: potential audience
 
 Answer: off site web analytics
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

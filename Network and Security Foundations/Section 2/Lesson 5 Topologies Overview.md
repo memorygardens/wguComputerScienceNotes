@@ -1,0 +1,65 @@
+### Bus Topology
+
+![5 devices connected via a straight line in a bus configuration.](https://assets.wgu.edu/943418accc94b4b9bc71cfcef554719f)
+
+Diagram. A bus network topology.
+
+A bus network topology is a single line of devices connected together by one shared network cable. Though bus networks are typically drawn as a single straight line, the network cable is rarely as straight. Often the cable is passed around walls or cubicles so that each computer can be attached to the network.
+
+Bus network topologies are uncommon today but were common in the early days of networking, before the advent of the Ethernet hub and switch. In a bus topology, computers connect to the network by physically tapping into the network cable using special adapters. This allows the network cable to remain one continuous conduit while also allowing the computers to send and receive electrical signals on the cable. This leads to an important requirement of bus networks: the ends of the cable must be properly terminated. At both ends of the network cable, special electrical resistors called terminators must be attached to absorb stray electrical signals on the wire. If these terminators are removed or if the network cable is accidentally cut, the electrical signals will not be properly absorbed and will bounce back along the wire, causing communication loss, a condition called signal reflection.
+
+The network in a bus topology is also referred to as a network segment because the network may be extended by adding more segments of cable to either end of the network, allowing more computers to connect to the shared network. This may seem like a good idea but can have significant negative consequences.
+
+Computers on bus networks communicate in half-duplex mode, meaning that you can either send or receive at any given time but cannot send and receive simultaneously. Also, the network cable in a bus topology is a shared communications medium, meaning that all computers attached to the network will receive any and all traffic sent on the network. You can visualize a one-lane road over a bridge, where cars must take turns traveling back and forth. This type of network performs well for a small number of computers but as it becomes more populated, it becomes exponentially more difficult to communicate with each other due to the collisions that occur when two or more computers attempt to transmit at the same time.
+
+To better understand the implications of this shared one-lane medium, consider the following analogy of using walkie-talkie radios. You and your friend both have portable radios that share a common radiofrequency. You can either listen or speak, but not both. Your radio continuously receives whatever signals are sent over the air until you press and hold the transmit button, at which time you no longer hear what is being said on the radio and instead transmit your message. You and your friend may chat back and forth all day without problems, taking turns speaking and listening. Of course, you may have the occasional collision when you both try to talk at the same time, effectively garbling the transmission or cutting each other off. When it happens, you will clumsily have to pause and tell each other to go or wait and then restart your conversation. This is the same behavior that computers face on a shared one-lane medium. They must listen for a clear time to send their data or be faced with a collision that forces everyone to stop sending for a moment while the line clears. Now imagine that you add more people to the walkie-talkie analogy. The more people you have sharing that frequency, the more often you will have a collision and need to restart the conversation. The same is true when adding many computers to a bus network topology: it gets crowded very quickly.
+
+Although a bus topology is very simple and usually inexpensive, overcrowding of devices can make the network unstable or unusable. And if the network cable is broken or cut, the entire network becomes unusable.
+
+### Ring Topology
+
+![5 computers connected in a circle or a ring on a blue background.](https://assets.wgu.edu/abee5aae0f320a87f024a4f2c7636a96)
+
+Diagram: A ring network topology.
+
+The ring topology was created to combat one of the more challenging aspects of the bus network: traffic collisions. As discussed in the previous section, when traffic collisions occur, all traffic must pause and wait for the line to clear before anyone can send again. This creates delays and degrades the performance of the network. To combat this problem, a ring network topology changes the way that computers know when to transmit and receive.
+
+Imagine sitting around a campfire with children all talking at once. You have a stick in your hand and decide to call it the "talking token." You quiet everyone down and tell them that you will begin passing the talking token around the circle. You explain that only the person holding the talking token will be allowed to speak. Everyone else will listen. After saying a few words, the person with the token must pass it to the next person. No one can hang on to the token for very long. Everyone will have a turn holding the token, even if they have nothing to say to the group. This behavior can be found in computers running ring-based protocols such as token ring or fiber distributed data interface (FDDI). It allows the network cable to remain a shared medium, but it controls traffic.
+
+Interestingly enough, ring topologies do not have to be physically arranged in a circle or even a ringlike shape. The network cable may run in a similar pattern to that of a bus network topology but with some important differences: the network cable is interrupted by each computer on the ring, and the cable is connected back to itself instead of using terminators. In a ring topology, the cable enters a “ring in” port on the network card of the computer and exits a “ring out” port on its way to the next computer in the ring. By definition, a ring is a closed-loop, and the ring topology is no exception. When building a ring topology, even if the computers are all physically arranged in a straight line, the network cable will always connect to itself. The cable exiting the “ring out” port on the last computer will be fed into the “ring in” port on the first computer, thereby closing the loop.
+
+Ring topologies are generally more reliable than bus topologies. However, like a bus network, if the ring is broken, network communication will fail. In cases where the network must be highly available, a dual-ring topology can be used. In this case, there are two sets of cables, and each computer has two network cards, one for each ring. In the event of a single cable break, the second ring can take over, allowing network traffic to continue to flow. However, the dual-ring topology has its greatest benefit in the event that both rings are simultaneously cut. In this case, the two loose ends on either side of the cable break can be connected together, merging the two broken rings into one much larger, but continuous, ring, where traffic can flow. This dual-ring topology is commonly found in fiberoptic networks, such as the synchronous optical network (SONET) ring.
+
+### Star Topology
+
+![star topology shows desktop, laptop, database, connected directly with lines to middle device a network switch.](https://assets.wgu.edu/c1cb6a2f279e95a5e28981f2e34fe509)
+
+Diagram. A star network topology with a central switch.
+
+The star network topology, also known as a hub-and-spoke network, is an improvement upon the bus topology previously described. Unlike the single straight line of the bus topology, a star network is composed of a central network device, such as an Ethernet switch, connected to various network devices, such as servers, computers, and printers, by individual network cables. The name of the topology is derived from its shape in a network diagram. When drawn, the various lines connecting the switch to the network devices appear like the spokes of a wheel or the rays of light emanating from a star in the center.
+
+In contrast to the other network topologies, where a network device such as a computer or printer is directly cabled (and therefore connected) to another adjacent device, in a star network, each device is only connected to the central switch. All device-to-device communication is sent through the switch at the center of the network and then forwarded by the switch to the proper destination.
+
+Today, star networks are the most common type of network found in local area network (LAN) environments. For example, consider the network topology in a typical office where there are computers on each desk and a central wiring closet where servers and network switches may be stored. The desktop computers each have a network card that is connected to a network port on the wall. Behind the wall, the cable continues to run into and through the ceiling to the central wiring closet where all the other network cables in the office have been run. In the wiring closet, these network cables terminate at a patch panel with many network ports, each representing a location in the office where a wall outlet exists.
+
+![Three computers connecting to phone jacks. Phone jacks connected to patch panel, which then connects to the switch.](https://assets.wgu.edu/87600e6fd87e22adf34483d42b21f34c)
+
+Diagram. A patch panel.
+
+When a computer is moved to a new location in the office, the network administrator can connect the appropriate network ports on the patch panel to a central Ethernet switch. The switch bridges the network traffic together and allows the devices to communicate with one another.
+
+One key advantage of this topology is versatility. Instead of running cables from computer to computer, in a star topology, network cables are often run in the walls to a central closet. In fact, the owner of the building may decide to run many more network cables than are actually needed to anticipate future growth. This gives the network administrator the flexibility to move computers around the office without re-cabling the network. The owner must only connect the computer to the network outlet on the wall and then patch in the corresponding network cable to the central switch. This also means that a break in a single network cable will only impact one network device rather than the entire network. However, if the central switch fails, the network fails, resulting in loss of communication for all the devices in that network.
+
+The star topology is not only used in LAN environments. It is also used in some forms of WAN, where many remote offices are connected to a central headquarters location. Each remote office then becomes a spoke off the hub of the central headquarters. When a computer in one remote office wishes to communicate with a computer in a different remote office, the traffic is passed through the central headquarters network. The star topology eliminates the need for a point-to-point network connection between each remote office.
+
+### Mesh Topology
+
+![5 computers connected to each other in a full mesh topology.](https://assets.wgu.edu/4328c6a8d33fe027137beb7314d508af)
+
+Diagram. A mesh network topology.
+
+The term mesh originates from the interconnected threads in a fabric or a net. Mesh topologies are often drawn as a web of direct connections between computers or nodes in a network. However, those connections may be permanent or constructed dynamically, as nodes need to talk to other nodes. A mesh topology permits nodes to communicate with each other; the topology may be either a full mesh, where every node has access to all other nodes, or a partial mesh network, where each node is only able to connect to a subset of the other nodes.
+
+This may have you wondering how you would run cables for such a complex and dynamic network. Unlike other topologies such as bus, ring, or star, mesh topologies are not necessarily constructed using physical network cables. The nodes may connect using Wi-Fi or radio signals or by virtual links such as virtual private networks (VPNs). Another example of a mesh network is a collection of routers that are able to communicate with each other and learn the best path for traffic to take when passing from node to node in the mesh.
+
+Mesh networks are typically used where communication within a network must be highly available and redundancy is needed. The nodes within a mesh network can communicate with each other, and these connections can be changed dynamically if one node were to fail. This behavior is often referred to as a self-healing network because the nodes in the mesh are aware of each other and can establish new connections around failed nodes as needed. Common use cases include wireless networks at home and in the office, as well as large collections of routers, such as on the internet.
