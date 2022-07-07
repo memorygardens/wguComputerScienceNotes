@@ -62,3 +62,68 @@ Another reason cloud computing is so popular is the global reach that it provide
 Finally, services in the cloud must be measurable. This alludes to the way that you pay for services in the cloud. Much like the way you pay for electricity or water at your home, cloud providers tend to charge you only for what you consume. This could be the number of hours that your virtual machines are running, the amount of data storage you have consumed, or even the number of gigabytes of network bandwidth that your customers consumed while browsing your website. So, just as you turn the lights off as you leave a room, do the same in the cloud. When not using resources, such as test or development systems, power them down and remove extra and unnecessary data. Of course, if you tend to leave the lights on, they will stay on, but you can expect a hefty bill at the end of the month. Ultimately, if you are conscientious about how you consume cloud resources, you will likely find cloud computing to be a very affordable alternative to traditional data centers.
 
 Products and services within cloud computing are organized based on the type of service being offered and by the location where the service is hosted. The various types of cloud services are categorized by the cloud service models, whereas the hosting locations are classified by the cloud deployment models.
+
+## Cloud Service Models 
+![[Pasted image 20220707000400.png]]
+
+#### IaaS
+
+You will start by learning about IaaS because it bears the closest resemblance to a corporate data center. First, you must understand the word infrastructure. In this context, infrastructure refers to the physical servers, storage, and networking that is required to exist before you can create any virtual servers or install any applications. This underlying infrastructure is maintained by the cloud provider so that you may focus your attention on the virtual machines and your applications. The cornerstones of the IaaS offering are server virtualization, storage virtualization, and network virtualization. Infrastructure as a service is very customizable, but it also means you are responsible for managing more things, such as the virtual machine configuration, its operating system, and all the patches that it requires.
+
+With regard to server virtualization, the cloud provider manages the hypervisor and the underlying hardware. You, as the consumer, are given access to a web portal, which enables you to create virtual machines and customize their resources to fit your business and application needs. The cloud provider allows you to choose the number of CPUs, the amount of RAM, the amount of storage, and even the number of network cards in the VM.
+
+Storage virtualization helps cloud providers offer you storage solutions that can expand in size or change in performance based on your business needs. When creating your VMs, you may be given the choice to provision regular storage at the normal price or very fast storage at a premium price. Your selection will depend on your application's requirements.
+
+Network virtualization gives cloud providers the ability to create virtual private cloud (VPC) networks for each of their customers, keeping each VPC network isolated from the others. As a consumer, you may even create additional networks to isolate your virtual machines for testing or development purposes. Your VMs will use the VPC network to communicate with each other just like the physical computers in your data center use your internal network to communicate with each other. The VPC network may also have routers and firewalls that allow your VMs access to the internet or to other data centers around the world.
+
+Server virtualization continues to play an important role in cloud computing, both for private clouds hosted within corporate data centers and for public clouds such as Google, Microsoft, and Amazon. Not only are virtual servers the flagship product offering in the infrastructure as a service (IaaS) cloud service model, virtual servers are also used by cloud providers behind the scenes to deliver their customer-facing platform as a service (PaaS) and software as a service (SaaS) products.
+
+A word of caution is warranted here. The cloud provider typically has little to no interaction with your virtual machines, leaving you with the responsibility to protect them from disaster (via replication) and data loss (via regular backups). In the event that one of the cloud provider's physical servers were to fail, the cloud provider is responsible for repairing their equipment; however, depending on your support agreement with the cloud provider, they may or may not be financially liable to you for the outage or responsible for restarting your virtual server following the outage.
+
+Also, keep in mind that in most legal jurisdictions, the cloud provider is not obligated to automatically back up your data, keep archive copies of your data, or even move your data to another location without your express consent and direction. This is not much different than deploying a VM in your own home lab environment. It is not automatically backed up or replicated to another location. If you suffer a hardware failure, you lose the VM. The principle advantages of IaaS solutions are that you can customize the infrastructure to suit your needs, install nearly any application in your VMs, and, if desired, implement high availability and backups for your solution. When deploying a production application to the cloud, build redundancy and disaster recovery into your design by deploying at least two of everything: one instance in a nearby data center for production use, and one instance in a geographically distant data center for safekeeping.
+
+#### PaaS
+
+If you just need a platform on which to deploy your application or you simply need a database without the hassle of managing the server, PaaS makes this easy. In PaaS solutions, the cloud provider is responsible for the virtual servers and, in some cases, the services that run on top of them, such as a database engine, and provides you with a platform on which you can run your code or store your data.
+
+You may have seen or heard about PaaS services in the past and yet not realized it because cloud providers rarely label their services as IaaS, PaaS, or SaaS. One example of a PaaS offering is basic web hosting, a service that has been around since the dawn of the web. Web hosting, like all PaaS offerings, is a partially managed service. The provider gives you limited control over a web server that they maintain for you. You have the ability to log in and upload your code, but they maintain the server for you, including the virtual hardware, guest OS, web services, and the patching for the OS and web services.
+
+PaaS solutions are particularly attractive for application developers because it allows them to deploy their code to an application runtime environment, such as Java, .NET, or Node.js, that is backed by an ambiguous pool of compute resources. That may sound magical, but the cloud provider's goal is to abstract the details of the resource consumption away from the application code and allow the application to scale up and down based on its load, such as the number of people using the application, or the amount of data the application is processing.
+
+A branch of PaaS solutions designed to further simplify the deployment of application code has gained so much popularity that it has been given its own name: serverless computing. The term serverless is not intended to imply that there are no servers, but rather that the consumer of the service (the developer in this case) typically is not even made aware of the number of servers being used in the back end to run the application. These solutions are also gaining in popularity because they can quickly deploy and then scale new applications with minimal effort required by the IT operations team, thereby increasing the reaction time of IT to changing business needs.
+
+#### SaaS
+
+SaaS solutions, like PaaS solutions, are often overlooked because they are so ubiquitous. The term software in SaaS could represent nearly anything you consume over the internet. A few examples include social media (Facebook), word processing (Office 365), and a line of business applications (Salesforce). Even now, you are using an SaaS solution to view this course and read this text. Software as a service allows consumers to store and potentially publish information without the need to manage the underlying applications or infrastructure.
+
+#### Private Cloud
+
+The term private cloud is most often associated with equipment hosted within a single company’s on-premises data center. The company purchases or leases the computer, storage, and networking hardware and maintains the data center facilities. If a failure occurs, the company is responsible for repairing the problem themselves because all the equipment belongs to and is managed by them.
+
+It is possible to have a private cloud that is not hosted within the company’s data center. The company may lease space in a commercial data center and operate the equipment there. This is usually referred to as co-locating, or a "co-lo" solution, because the company is co-locating its equipment with the commercial data center’s equipment. Some public cloud providers also offer this as an option for customers who require complete control over the physical equipment yet wish to house the equipment outside their own data center.
+
+The primary advantage of a private cloud is the ownership and control that a company has over the equipment. Some companies use a private cloud only because of regulatory restrictions that mandate the company to maintain absolute control over the hardware and software that run a particular system.
+
+#### Public Cloud
+
+There are many public cloud providers, but some providers, such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform (GCP), are more well-known because of their marketing and experience in the industry. As with "private cloud," the term "public cloud" refers to the ownership and maintenance of the underlying infrastructure and facilities. In the case of a public cloud, the cloud provider is responsible for maintaining the hardware and repairing the infrastructure instead of the customer.
+
+Another common misconception is that public cloud providers are inherently insecure because they host content from many different companies; however, the opposite is much more likely to be true. Public cloud providers must keep their customers’ data isolated from one another and must follow strict rules that govern how data is handled and destroyed. Even their physical data centers are required to have the most state-of-the-art security available. In some cases, public cloud providers may have a higher level of security than the customers they host.
+
+Another consideration is the concept of multi-tenancy, meaning when multiple tenants share the same physical resource. In any multi-tenant situation, there are potential security and performance implications because you are sharing hardware with other companies, though the risks may not be as significant as they seem. Multi-tenancy in computers is analogous to living in an apartment building. Many different people live within the same apartment building (the physical computer), but each tenant (the customer) has their own apartment (a VPC) with a lock on the front door (a firewall). In addition, for extra privacy, the members of a tenant’s family (the servers of one customer) may even have their own rooms with locked doors to further isolate themselves.
+
+#### Community Cloud
+
+Community clouds are uncommon in the commercial sector but may be found in universities or government agencies. These clouds are data centers that are jointly owned and operated by the tenants. Think of it as a semi-private cloud for each tenant, with the added benefit that the maintenance and management of the underlying infrastructure is shared by all the tenants.
+
+#### Hybrid Cloud
+
+The term hybrid cloud refers to a combination of private cloud and public cloud and is most commonly associated with companies that extend their applications and services between their own data center and that of a public cloud provider's. This may be done to allow the company easy access to additional computing resources during times of burst demand, or as a way to host most of their services in the public cloud with the exception of the few applications that are subject to regulatory controls and must remain at an on-premises data center.
+
+For hybrid cloud computing, the customer will require a dedicated connection between their on-premises data center and the public cloud provider. This connection may be a virtual private network (VPN) established over the internet or a dedicated wide area network (WAN) connection maintained by a telecommunications provider.
+
+#### Multi-Cloud
+
+Multi-cloud is the concept of leveraging the services of multiple public cloud providers, such as hosting your website at AWS and GCP and balancing the users between these providers. This concept, in practice, can add redundancy and flexibility.
+
+Another use case is when a company currently uses services in one cloud provider but another cloud provider excels or provides cheaper services in a particular area, for example, machine learning or data warehousing.
