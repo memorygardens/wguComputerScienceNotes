@@ -34,7 +34,13 @@ Q. Which phase of a waterfall approach would create a sequence diagram that spec
 A. Testing
 Q. Which phase of an agile approach would define a hypothesis to find a problem in a program?
 A. Testing
-Q.   A company has a new project it wishes to implement to track and analyze employee and customer interactions. The company leadership determines that the system should support direct data entry as well as automated data capture of phone calls and emails.   
+Q.   A company has a new project it wishe       
+
+
+
+
+
+s to implement to track and analyze employee and customer interactions. The company leadership determines that the system should support direct data entry as well as automated data capture of phone calls and emails.   
 Which phase of the waterfall process is occurring?
 A. Analysis
 Q.   A programmer shows a program's first version to a customer. Based on feedback, the programmer begins writing a second version of the program.    
